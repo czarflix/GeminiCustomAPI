@@ -1,6 +1,6 @@
-# Gemini Web API Wrapper
+# Gemini Web-UI Automation Wrapper
 
-A local-only FastAPI service that wraps the Gemini web UI using Playwright automation. This allows you to use your own Google account session to interact with Gemini 2.5 Pro and Flash models programmatically.
+A local-only FastAPI experiment that drives the Gemini web UI using Playwright automation. It is not an official Gemini API, SDK, or service integration; it depends on the current web UI and an operator-owned browser session.
 
 ## Features
 
@@ -8,7 +8,11 @@ A local-only FastAPI service that wraps the Gemini web UI using Playwright autom
 - **Automatic Fallback**: Automatically falls back to Flash when Pro quota is exhausted
 - **File Upload Support**: Upload files to Gemini (documents, images, code)
 - **Persistent Session**: Uses your Google account session stored in a persistent browser profile
-- **No API Key Required**: Uses the web interface directly
+- **Browser-session based**: Uses a persistent local profile rather than embedding a provider credential
+
+## Safety and scope
+
+This project is for controlled local experiments. Keep the browser profile out of version control, do not run the service on a public interface, and review Google's current terms and automation policies before use. UI changes, login challenges, quotas, concurrency, account state, and provider availability can break the wrapper. It has no claim of production reliability, provider permission, or access to a stable model API.
 
 ## Installation
 
